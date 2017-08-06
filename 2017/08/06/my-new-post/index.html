@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="aeou">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="关于hexo的一些补充"/>
+  <meta property="og:title" content="hexo安装配置及初步使用"/>
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="Yayooo blog"/>
   <meta property="og:type" content="article" />
@@ -43,7 +43,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">关于hexo的一些补充</p>
+          <p class="title">hexo安装配置及初步使用</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -101,28 +101,39 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-08-06</span>
-            <span class="time">11:36:36</span>
+            <span class="time">12:34:52</span>
           </span>
           
         </div>
         <!-- Tags -->
         
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/hexo/">#hexo</a>
+
+
+          </div>
+        
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>针对windows用户<br>需要hexo，node.js，git</p>
-<p>下载安装git，之后会出一篇自己的总结，可以参考廖雪峰的教程<br>下载安装node.js，选最新的版本就行，参考这两个教程<br>安装hexo</p>
-<p>注意的是</p>
-<p><blockquote></blockquote></p>
-<p></p><p>$ hexo s</p><br><br>之后会出现<p></p>
-<p><blockquote></blockquote></p>
-<p></p><p>$ hexo s</p><p></p>
-<p></p><p>INFO  Start processing</p><p></p>
-<p></p><p>INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.</p><br><br>且后续未出现任何东西，表明现在可以本地预览，ctrl+c之后便退出预览功能。<p></p>
-<p>git 的复制粘贴建议用右键后Copy，Paste使用</p>
-<p>配置文件修改中每个：后需要一个空格否则会在</p>
-<p><blockquote></blockquote></p>
-<p></p><p>$ hexo g</p><p></p>
-<p></p><p>$ hexo s</p><br><br>后报错<p></p>
+          <ul>
+<li>针对windows用户</li>
+<li>几个很实用的教程链接</li>
+<li>过程中几个注意事项<a id="more"></a>
+</li>
+</ul>
+<hr>
+<h1 id="下载安装git"><a href="#下载安装git" class="headerlink" title="下载安装git"></a>下载安装git</h1><p>参考<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰的教程</a><br>*git 的复制粘贴建议用<code>右键</code>后<code>Copy</code>，<code>Paste</code>使用</p>
+<h1 id="下载安装node-js"><a href="#下载安装node-js" class="headerlink" title="下载安装node.js"></a>下载安装node.js</h1><p>选最新的版本就行，参考<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">菜鸟教程</a><br>*安装模式注意选 <code>Add to PATH</code></p>
+<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><p>参考<a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a><br>*<code>$ hexo s</code>后出现下面所示且后续无任何东西，表明现在可以本地预览，<code>ctrl+c</code>之后便退出预览功能。</p>
+<pre><code>$ hexo s
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+</code></pre><p>*配置文件修改中每个<code>：</code>后需要一个空格否则会在</p>
+<pre><code>$ hexo g
+$ hexo s
+</code></pre><p>后报错</p>
 
         </div>
       </div>

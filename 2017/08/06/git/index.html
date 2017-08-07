@@ -101,7 +101,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-08-06</span>
-            <span class="time">20:47:42</span>
+            <span class="time">20:53:11</span>
           </span>
           
         </div>
@@ -118,17 +118,17 @@
         <!-- Post Main Content -->
         <div class="post-content">
           <p>总结一下工作室刚开始做项目的几个步骤吧<br>基本操作和概念看<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="external">廖雪峰git教程</a><br>我只讲一讲我刚刚接触项目时会用到的和可能遇到的问题的解决方法<br>没有处理的问题等开学后问学长学姐弄清楚后再更新<br><a id="more"></a></p>
-<h2 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h2><p><strong>*</strong>工作室git的账号和github的账号是不一样的<br>记住id和邮箱</p>
-<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>我用的<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="external">廖雪峰git教程</a>里提到的<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit" target="_blank" rel="external">国内镜像</a>，全程默认安装。<br>然后打开<code>git bash</code>输入下面两行，这里的id和email就是之前创建的工作室git账号</p>
+<h2 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a><strong>注册账号</strong></h2><p><strong>*</strong>工作室git的账号和github的账号是不一样的<br>记住id和邮箱</p>
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a><strong>安装git</strong></h2><p>我用的<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="external">廖雪峰git教程</a>里提到的<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit" target="_blank" rel="external">国内镜像</a>，全程默认安装。<br>然后打开<code>git bash</code>输入下面两行，这里的id和email就是之前创建的工作室git账号</p>
 <pre><code>$ git config --global user.name &quot;你的id&quot;
 $ git config --global user.email &quot;你的email&quot;
-</code></pre><h2 id="添加ssh"><a href="#添加ssh" class="headerlink" title="添加ssh"></a>添加ssh</h2><p>输入</p>
+</code></pre><h2 id="添加ssh"><a href="#添加ssh" class="headerlink" title="添加ssh"></a><strong>添加ssh</strong></h2><p>输入</p>
 <pre><code>$ ssh-keygen -t rsa -C &quot;你的email&quot;
 </code></pre><p>一路回车，会得到两个文件<code>id_rsa</code>和<code>id_rsa.pub</code>，路径在回车期间出现过，可以回过去看。<br>打开<code>id_rsa.pub</code>（最好不要用记事本）全文复制<br>网页登录git账号-&gt;页面右上角头像下拉栏-&gt;用户设置-&gt;左侧管理ssh密钥-&gt;增加密钥-&gt;粘贴-&gt;增加密钥（绿色）</p>
-<h2 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h2><p>网页左上角控制面板-&gt;右侧参与协作的仓库-&gt;右侧头像下方的派生<br><strong>*</strong>仓库左侧的仓库名处有“派生自xxx”才是自己派生的仓库<br>进入自己派生的仓库后复制右边的链接（最好是http的），然后输入下面两行，<code>XXX</code>为自定义的仓库名，<code>http://XXX</code>为之前复制的链接<br><strong>*</strong>git中的复制粘贴不是<code>ctrl+c</code>，<code>ctrl+v</code>，我的是右键后copy，paste。</p>
+<h2 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a><strong>添加远程库</strong></h2><p>网页左上角控制面板-&gt;右侧参与协作的仓库-&gt;右侧头像下方的派生<br><strong>*</strong>仓库左侧的仓库名处有“派生自xxx”才是自己派生的仓库<br>进入自己派生的仓库后复制右边的链接（最好是http的），然后输入下面两行，<code>XXX</code>为自定义的仓库名，<code>http://XXX</code>为之前复制的链接<br><strong>*</strong>git中的复制粘贴不是<code>ctrl+c</code>，<code>ctrl+v</code>，我的是右键后copy，paste。</p>
 <pre><code>$ git remote add XXX http://XXX
 $ git clone http://XXX
-</code></pre><h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><p><strong>*</strong>一个功能一个分支<br>创建并切换分支，分支名自定义，一般是功能的英文，多个单词用下划线连接。</p>
+</code></pre><h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a><strong>创建分支</strong></h2><p><strong>*</strong>一个功能一个分支<br>创建并切换分支，分支名自定义，一般是功能的英文，多个单词用下划线连接。</p>
 <pre><code>$ git checkout -b xxx
 </code></pre><p>下面两行前者是创建，后者是切换</p>
 <pre><code>$ git branch xxx
@@ -139,13 +139,17 @@ $ git commit -m &quot;xxxx&quot;
 </code></pre><p>两个过程反复<br>开发完成后切换回master分支</p>
 <pre><code>$ git checkout master
 </code></pre><p><strong>*</strong>每次开发前要拉取master的最新更新并合并 master 分支到自己开发的分支，自行解决冲突后再开发。</p>
-<h2 id="提交并请求合并"><a href="#提交并请求合并" class="headerlink" title="提交并请求合并"></a>提交并请求合并</h2><p>每次提交前一定要记得执行 git fetch / git pull 操作，先解决一下可能有的冲突！然后再git push。<br>push成功后网页进入自己派生的仓库，点击左侧的绿色按钮发起合并请求。</p>
-<h3 id="暂时先是这些，还有一些细节，概念以及图，没有处理的问题等开学后问学长学姐弄清楚后再更新，先把要处理的问题记下来，免得忘了"><a href="#暂时先是这些，还有一些细节，概念以及图，没有处理的问题等开学后问学长学姐弄清楚后再更新，先把要处理的问题记下来，免得忘了" class="headerlink" title="暂时先是这些，还有一些细节，概念以及图，没有处理的问题等开学后问学长学姐弄清楚后再更新，先把要处理的问题记下来，免得忘了"></a>暂时先是这些，还有一些细节，概念以及图，没有处理的问题等开学后问学长学姐弄清楚后再更新，先把要处理的问题记下来，免得忘了</h3><blockquote>
-<p><em>工作室git多个账号多个ssh配置问题，有查过，但改配置文件好像不起作用，不知道是不是gogs的ssh端口关闭有一定影响。
-</em>一定要有origin这个仓库吗？<br><em>派生的作用，是否需要新加一个原仓库的远程仓库
-</em>每次拉取master更新是原仓库的吗？<br><em>fetch，pull，merge的用法，还没用过，分支与分支间什么鬼啊
-</em>一个功能一个分支吗？<br><em>刚开始开发需要clone到本地吗？还是直接拉取。因为没用过拉取，有点懵。
-</em>分支删除问题<br>*需要自己先把本地分支合并到本地master再push吗？</p>
+<h2 id="提交并请求合并"><a href="#提交并请求合并" class="headerlink" title="提交并请求合并"></a><strong>提交并请求合并</strong></h2><p>每次提交前一定要记得执行 git fetch / git pull 操作，先解决一下可能有的冲突！然后再git push。<br>push成功后网页进入自己派生的仓库，点击左侧的绿色按钮发起合并请求。</p>
+<h3 id="暂时先是这些，还有一些细节，概念以及图，没有处理的问题等开学后问学长学姐弄清楚后再更新，先把要处理的问题记下来，免得忘了"><a href="#暂时先是这些，还有一些细节，概念以及图，没有处理的问题等开学后问学长学姐弄清楚后再更新，先把要处理的问题记下来，免得忘了" class="headerlink" title="暂时先是这些，还有一些细节，概念以及图，没有处理的问题等开学后问学长学姐弄清楚后再更新，先把要处理的问题记下来，免得忘了"></a><strong>暂时先是这些，还有一些细节，概念以及图，没有处理的问题等开学后问学长学姐弄清楚后再更新，先把要处理的问题记下来，免得忘了</strong></h3><blockquote>
+<p>*工作室git多个账号多个ssh配置问题，有查过，但改配置文件好像不起作用，不知道是不是gogs的ssh端口关闭有一定影响。</p>
+<p>*一定要有origin这个仓库吗？</p>
+<p>*派生的作用，是否需要新加一个原仓库的远程仓库</p>
+<p>*每次拉取master更新是原仓库的吗？</p>
+<p>*fetch，pull，merge的用法，还没用过，分支与分支间什么鬼啊</p>
+<p>*一个功能一个分支吗？</p>
+<p>*刚开始开发需要clone到本地吗？还是直接拉取。因为没用过拉取，有点懵。</p>
+<p>*分支删除问题</p>
+<p>*需要自己先把本地分支合并到本地master再push吗？</p>
 </blockquote>
 
         </div>

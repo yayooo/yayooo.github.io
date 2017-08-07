@@ -101,7 +101,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-08-06</span>
-            <span class="time">15:15:12</span>
+            <span class="time">19:32:31</span>
           </span>
           
         </div>
@@ -117,8 +117,11 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>拉取目标远程仓库更新与自己仓库合并</p>
-<p>git remote add <em>自定义的区别于origin的名字，表示不同的来源</em> <em>对应来源的地址（对应此项目就是<a href="http://git.starstudio.org/regiondavid/retire-mobile.git）" target="_blank" rel="external">http://git.starstudio.org/regiondavid/retire-mobile.git）</a></em><br>然后进行正常的拉取远程仓库操作，只是区别为要将 origin 换成 上边自定义的名字。eg：git fetch test branch:branch。</p>
+          <p>总结一下工作室刚开始做项目的几个步骤吧<br>基本操作和概念看<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="external">廖雪峰git教程</a><br>我只讲一讲刚刚接触项目时会用到的和可能遇到的问题的解决方法<br><a id="more"></a></p>
+<h2 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h2><p>*工作室git的账号和github的账号是不一样的<br>记住id和邮箱</p>
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>我用的<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="external">廖雪峰git教程</a>里提到的<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit" target="_blank" rel="external">国内镜像</a>，全程默认安装。<br>然后打开git bash输入下面两行，这里的id和email就是之前创建的工作室git账号<br>    $ git config –global user.name “你的id”<br>    $ git config –global user.email “你的email”</p>
+<h2 id="添加ssh"><a href="#添加ssh" class="headerlink" title="添加ssh"></a>添加ssh</h2><p>输入<br>    $ ssh-keygen -t rsa -C “你的email”<br>一路回车，会得到两个文件<code>id_rsa</code>和<code>id_rsa.pub</code>，路径在回车期间出现过，可以回过去看。<br>打开<code>id_rsa.pub</code>（最好不要用记事本）全文复制<br>网页登录git账号-&gt;页面右上角头像下拉栏-&gt;用户设置-&gt;左侧管理ssh密钥-&gt;增加密钥（蓝色）-&gt;粘贴-&gt;增加密钥（绿色）</p>
+<h2 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h2><p>网页左上角控制面板右侧参与协作的仓库右侧头像下方的派生<br>git remote add <em>自定义的区别于origin的名字，表示不同的来源</em> <em>对应来源的地址（对应此项目就是<a href="http://git.starstudio.org/regiondavid/retire-mobile.git）" target="_blank" rel="external">http://git.starstudio.org/regiondavid/retire-mobile.git）</a></em><br>然后进行正常的拉取远程仓库操作，只是区别为要将 origin 换成 上边自定义的名字。eg：git fetch test branch:branch。</p>
 <p>每次提交前一定要记得执行 git fetch / git pull 操作，先解决一下可能有的冲突！</p>
 <p>git协作规范</p>
 <p>每个人把这个仓库派生（fork）到自己的账号下，将自己的账号下的仓库拉到本地进行开发。</p>

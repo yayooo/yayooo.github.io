@@ -101,7 +101,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-08-06</span>
-            <span class="time">16:52:03</span>
+            <span class="time">15:15:12</span>
           </span>
           
         </div>
@@ -117,7 +117,16 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          
+          <p>拉取目标远程仓库更新与自己仓库合并</p>
+<p>git remote add <em>自定义的区别于origin的名字，表示不同的来源</em> <em>对应来源的地址（对应此项目就是<a href="http://git.starstudio.org/regiondavid/retire-mobile.git）" target="_blank" rel="external">http://git.starstudio.org/regiondavid/retire-mobile.git）</a></em><br>然后进行正常的拉取远程仓库操作，只是区别为要将 origin 换成 上边自定义的名字。eg：git fetch test branch:branch。</p>
+<p>每次提交前一定要记得执行 git fetch / git pull 操作，先解决一下可能有的冲突！</p>
+<p>git协作规范</p>
+<p>每个人把这个仓库派生（fork）到自己的账号下，将自己的账号下的仓库拉到本地进行开发。</p>
+<p>每个人新建一个分支（切记：分支名用功能去命名，多个词语时使用下划线连接），并在自己的分支下进行开发，并及时将自己的分支推送到自己账号下的远程仓库的对应分支。当某个功能开发完毕后，从自己的账号下的仓库发起合并请求，请求当前分支合并到原始仓库的 master 分支。</p>
+<p>每次开发前记得先去拉去 master 分支最新的更新，并合并 master 分支到自己开发的分支，如有冲突，自行解决冲突</p>
+<p>开发规范</p>
+<p>待补充</p>
+
         </div>
       </div>
     </div>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="aeou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="JavaScript学习笔记二--imooc_JavaScript进阶篇"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Yayooo blog"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Yayooo blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Yayooo blog</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">JavaScript学习笔记二--imooc_JavaScript进阶篇</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/yayooo">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:yayooo@yeah.net">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By aeou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-08-09</span>
+            <span class="time">19:51:24</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/javascript/">#javascript</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>一定要学啊<br><a id="more"></a></p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a><strong>变量</strong></h3><p><em>这些不能用
+</em><img src="http://img.mukewang.com/529c07c000014f5103080447.jpg" alt="js关键字和保留字"><br>*<code>var</code>还可以一次声明多个变量，变量之间用”,”逗号隔开。</p>
+<pre><code>var num1,mun2 ; //声明一个变量num1
+</code></pre><p>&lt;2.3弹两次？</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a><strong>数组</strong></h3><p>定义数组</p>
+<pre><code>var myarr=new Array();
+var myarray= new Array(8);
+</code></pre><p><em>1.创建的新数组是空数组，没有值，如输出，则显示undefined。
+</em>2.虽然创建数组时，指定了长度，但实际上数组都是变长的，也就是说即使指定了长度为8，仍然可以将元素存储在规定长度以外。<br>    在java（的字符串容器）里，先指定长度可以节省内存空间。</p>
+<pre><code>因为你不预先指定长度，电脑会默认分配一个32字节的长度，但正常情况下并不需要这么多。
+</code></pre><p>创建并赋值<br>第一种方法：</p>
+<pre><code>var myarray = new Array(66,80,90,77,59);//创建数组同时赋值
+</code></pre><p>第二种方法：</p>
+<pre><code>var myarray = [66,80,90,77,59];//直接输入一个数组（称 “字面量数组”）
+</code></pre><p>如果我们想知道数组的大小，只需引用数组的一个属性length。Length属性表示数组的长度，即数组中元素的个数。</p>
+<p>语法：</p>
+<pre><code>myarray.length; //获得数组myarray的长度
+</code></pre><p>*可以用减少length的方法，来去掉末尾的元素。</p>
+<ol>
+<li><p>二维数组的定义方法一</p>
+<p> var myarr=new Array();  //先声明一维<br> for(var i=0;i&lt;2;i++){   //一维长度为2</p>
+<pre><code>myarr[i]=new Array();  //再声明二维 
+for(var j=0;j&lt;3;j++){   //二维长度为3
+    myarr[i][j]=i+j;   // 赋值，每个数组元素的值为i+j
+}
+</code></pre><p> }</p>
+</li>
+<li><p>二维数组的定义方法二</p>
+<p> var Myarr = [[0 , 1 , 2 ],[1 , 2 , 3]]</p>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a><strong>事件</strong></h3><p>主要事件表<br><img src="http://img.mukewang.com/53e198540001b66404860353.jpg" alt="主要事件表"><br>语法：</p>
+<p> onclick=”openwin()”<br>*有引号<br>onunload<br>卸载事件通俗的讲，就是离开当前网页，离开当前网页有两种方式，</p>
+</li>
+</ol>
+<p>1.像平常我们关闭网页，也就是离开网页了；<br>2.在当前网页点击加载其他网页，跳转到其他网页，也是离开当前网页的一种；</p>
+<p>①目前试了Firefox、Google Chrome、IE三个浏览器，该事件只对IE起作用。</p>
+<p>②onunload事件对于刷新页面和超链接跳转其他页面情况有效，对于关闭页面无效。</p>
+<p>③onbeforeunload事件才对关闭页面有效。</p>
+<p>④window.onunload = onunload_message后面不需要加()。如果有人不管加没加()，都在页面跳转和刷新时弹不出提示框，是因为IE限制了网页运行脚本或ActiveX控件，点击“允许阻止的内容”，再刷新和跳转就可以看到效果了。</p>
+<p>⑤加了()的，在页面一打开就会弹出提示框，这个不是我们要实现的效果。</p>
+<h3 id="第六章编程题"><a href="#第六章编程题" class="headerlink" title="第六章编程题"></a><strong>第六章编程题</strong></h3><p>下面的代码得到的是一个字符串，parseInt()函数可解析一个字符串,并返回一个整数。</p>
+<pre><code>document.getElementById(‘id名’).value
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

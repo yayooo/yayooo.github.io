@@ -101,7 +101,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-08-09</span>
-            <span class="time">00:39:03</span>
+            <span class="time">00:50:22</span>
           </span>
           
         </div>
@@ -159,6 +159,61 @@ for(var j=0;j&lt;3;j++){   //二维长度为3
 <p>⑤加了()的，在页面一打开就会弹出提示框，这个不是我们要实现的效果。</p>
 <h3 id="第六章编程题"><a href="#第六章编程题" class="headerlink" title="第六章编程题"></a><strong>第六章编程题</strong></h3><p>下面的代码得到的是一个字符串，parseInt()函数可解析一个字符串,并返回一个整数。</p>
 <pre><code>document.getElementById(‘id名’).value
+</code></pre><h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a><strong>对象</strong></h3><p>访问对象的方法：</p>
+<p>objectName.methodName()<br>如使用string 对象的 toUpperCase() 方法来将文本转换为大写：</p>
+<pre><code>var mystr=&quot;Hello world!&quot;;//创建一个字符串
+var request=mystr.toUpperCase(); //使用字符串对象方法
+</code></pre><p>toLowerCase()方法，将字符串所有大写字母都变成小写的字符串。<br>Date 日期对象<br>可以储存任意一个日期，并且可以精确到毫秒数（1/1000 秒）。</p>
+<p>定义一个时间对象 :</p>
+<pre><code>var Udate=new Date(); 
+</code></pre><p>使 Udate 成为日期对象，并且已有初始值：当前时间(当前电脑系统时间)。<br>如果要自定义初始值，可以用以下方法：</p>
+<pre><code>var d = new Date(2012, 10, 1);  //2012年10月1日
+var d = new Date(&apos;Oct 1, 2012&apos;); //2012年10月1日
+</code></pre><p>我们最好使用下面介绍的“方法”来严格定义时间。<br>访问方法语法：<code>&lt;日期对象&gt;.&lt;方法&gt;</code><br>Date对象中处理时间和日期的常用方法：<br>    get/setDate() 返回，设置日期<br>    get/setFullYear() 返回，设置年份，用四位数表示<br>    get/setYear() 返回，设置年份<br>    get/setHours 返回，设置小时 24小时<br>    get/setMouth ()返回，设置月份 0-11月 所以加一<br>    get/setMinutes ()返回，设置分钟<br>    get/setTime() 返回，设置时间，毫秒为单位<br>返回指定位置的字符<br>charAt() 方法可返回指定位置的字符。返回的字符是长度为 1 的字符串。</p>
+<p>语法:</p>
+<pre><code>stringObject.charAt(index)
+</code></pre><p>参数说明：<br><img src="http://img.mukewang.com/53251a310001cf1e03370092.jpg" alt="参数说明"></p>
+<p>*1.字符串中第一个字符的下标是 0。最后一个字符的下标为字符串长度减一（string.length-1）。</p>
+<p>*2.如果参数 index 不在 0 与 string.length-1 之间，该方法将返回一个空字符串。<br>indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。</p>
+<p>语法</p>
+<pre><code>stringObject.indexOf(substring, startpos)
+</code></pre><p>参数说明：<br><img src="http://img.mukewang.com/53853d4200019feb04920149.jpg" alt="参数说明"><br>*如果要检索的字符串值没有出现，则该方法返回 -1。<br>split() 方法将字符串分割为字符串数组，并返回此数组。</p>
+<p>语法：</p>
+<pre><code>stringObject.split(separator,limit)
+</code></pre><p>参数说明:<br><img src="http://img.mukewang.com/532bee4800014c0404230108.jpg" alt="参数说明"></p>
+<p>*如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。<br>substring() 方法用于提取字符串中介于两个指定下标之间的字符。</p>
+<p>语法:</p>
+<pre><code>stringObject.substring(startPos,stopPos) 
+</code></pre><p>参数说明:<br><img src="http://img.mukewang.com/532bf1bb000151af04450082.jpg" alt="参数说明"></p>
+<p>*1. 返回的内容是从 start开始(包含start位置的字符)到 stop-1 处的所有字符，其长度为 stop 减start。</p>
+<p>*2. 如果参数 start 与 stop 相等，那么该方法返回的就是一个空串（即长度为 0 的字符串）。</p>
+<p>*3. 如果 start 比 stop 大，那么该方法在提取子串之前会先交换这两个参数。<br>substr() 方法从字符串中提取从 startPos位置开始的指定数目的字符串。</p>
+<p>语法:</p>
+<pre><code>stringObject.substr(startPos,length)
+</code></pre><p>参数说明:<br><img src="http://img.mukewang.com/532bf2e00001105305100098.jpg" alt="参数说明"></p>
+<p>*如果参数startPos是负数，从字符串的尾部开始算起的位置。也就是说，-1 指字符串中最后一个字符，-2 指倒数第二个字符，以此类推。</p>
+<p>*如果startPos为负数且绝对值大于字符串长度，startPos为0。<br>Math 对象是一个固有的对象，无需创建它，直接把 Math 作为对象使用就可以调用其所有属性和方法。这是它与Date,String对象的区别。</p>
+<p>Math 对象属性<br><img src="http://img.mukewang.com/532fe7cf0001e7b505170269.jpg" alt="Math 对象属性"></p>
+<p>Math 对象方法<br><img src="http://img.mukewang.com/532fe841000174db05160622.jpg" alt="Math 对象方法"><br>随机数 random()返回一个大于或等于 0 但小于 1 的符号为正的数字值。<br>数组方法：</p>
+<p><img src="http://img.mukewang.com/533295ab0001dead05190599.jpg" alt="数组方法"><br>slice() 方法可从已有的数组中返回选定的元素。 该方法并不会修改数组，而是返回一个子数组。<br>window对象<br>window对象是BOM的核心，window对象指当前的浏览器窗口。</p>
+<p>window对象方法:<br><img src="http://img.mukewang.com/535483720001a54506670563.jpg" alt="window对象方法"><br>BOM:Browser Object Model，浏览器对象模型。</p>
+<p>DOM:Document Object Mode，文档对象模型。<br>JavaScript 计时器<br>在JavaScript中，我们可以在设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。<br>计时器类型：<br>一次性计时器：仅在指定的延迟时间之后触发一次。<br>间隔性触发计时器：每隔一定的时间间隔就触发一次。<br>计时器方法：</p>
+<p><img src="http://img.mukewang.com/56976e1700014fc504090143.jpg" alt="计时器方法"></p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    var num=0;
+    function startCount() {
+        document.getElementById(&apos;count&apos;).value=num;
+        num=num+1;
+        setTimeout(&quot;startCount()&quot;,1000);
+    }
+    setTimeout(&quot;startCount()&quot;,1000);
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;input type=&quot;text&quot; id=&quot;count&quot; /&gt;
+&lt;/form&gt;
+&lt;/body&gt;
 </code></pre>
         </div>
       </div>
